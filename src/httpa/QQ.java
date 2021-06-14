@@ -31,7 +31,7 @@ public class QQ extends HttpServlet {
 //        System.out.println("ddd");
 //        String atoke = token.split("&")[0];
         // 取回 token
-        String tokenBody = HttpUtil.get(" https://graph.qq.com/oauth2.0/token","grant_type=authorization_code&client_id=101920563&client_secret=49d694d3bec469e4d123372ad12c5708&code="+code+"&redirect_uri=https://houlai.fun/qq&fmt=json");
+        String tokenBody = HttpUtil.get(" https://graph.qq.com/oauth2.0/token","grant_type=authorization_code&client_id=&client_secret=&code="+code+"&redirect_uri=https://houlai.fun/qq&fmt=json");
         String token = JSONObject.parseObject(tokenBody).getString("access_token");
 
         String openidBody = HttpUtil.get("https://graph.qq.com/oauth2.0/me","access_token="+token+"&fmt=json");

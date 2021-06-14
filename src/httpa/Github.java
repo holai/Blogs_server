@@ -24,7 +24,7 @@ public class Github  extends HttpServlet {
         String code = req.getParameter("code");
 //        String code = req.getParameter("code");
         // 取回 token
-        String token = HttpUtil.get("https://github.com/login/oauth/access_token","code="+code+"&client_id=0b8a98f25c08fe2c650b&client_secret=8e7155a91e59dd0ab4cc3dc35f91b4d3bacf475f");
+        String token = HttpUtil.get("https://github.com/login/oauth/access_token","code="+code+"&client_id=&client_secret=");
         String atoke = token.split("&")[0];
         Mysqluse mysqluse = new Mysqluse(resp);
         String name=atoke;
